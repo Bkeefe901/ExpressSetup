@@ -1,0 +1,27 @@
+{
+  "name": "lecture",
+  "version": "1.0.0",
+  "description": "Express setup",
+  "homepage": "https://github.com/Bkeefe901/ExpressSetup#readme",
+  "bugs": {
+    "url": "https://github.com/Bkeefe901/ExpressSetup/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bkeefe901/ExpressSetup.git"
+  },
+  "license": "ISC",
+  "author": "BK",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

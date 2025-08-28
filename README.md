@@ -37,3 +37,28 @@ In order to follow along with the examples given throughout this lesson:
 - Import Express within index.js using const express = require("express").
 - Start your application using the command nodemon index.js.
 
+## Creating an Express Server
+
+Creating and starting an Express server is simple. First, we create an application by running (calling) express() and caching the return as a variable, typically called app.
+
+
+Then, we tell the app to listen to a particular port, using the same syntax as with Node's built-in http module's createServer technique. It's that simple (almost)!
+
+## Express Routing
+
+Express requires us to define routes, which is why the response of the previous example showed "Cannot GET /". By default, the web client is asking for the base route "/" from the server using an HTTP GET request.
+
+
+Right now, however, we do not have anything handling that route.
+
+
+Express routes have the following structure:
+
+- app.method(path, handler)
+    - app is the instance of Express.
+    - method is the HTTP request method, in lowercase (GET, POST, DELETE, etc.).
+    - path is the URL path on the server.
+    - handler is the function executed when the route is matched.
+
+
+
