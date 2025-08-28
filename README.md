@@ -62,3 +62,12 @@ Express routes have the following structure:
 
 
 
+## Creating GET Routes
+
+The most commonly-used routes are GET routes, which simply request a resource to be delivered. In order to expand the example application, we will need to add a route that allows the client to GET the base URL, "/" as follows.
+
+
+In this same way, we can add additional routes to GET additional resources.
+
+## Express Convenience
+

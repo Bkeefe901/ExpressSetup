@@ -17,13 +17,23 @@
 
 // After installing express this is boilerplate stuff
 
-const express = require("express");
+const express = require("express"); // importing express
+
+const dotenv = require("dotenv"); // import dotenv
+dotenv.config(); // using dotenv
 
 
-const app = express();
+const app = express(); // calling express to use in the future
 
-const port = 3000;
+const port = process.env.PORT;
+
+let fruitData = ['apple', 'pear', 'mango', 'golden kiwi'];
+
+app.get("/", (req, res) => {
+    res.send("Hello Express!");
+})
 
 app.listen(port, () => {
     console.log(`Server listening on port: ${port}`);
 })
+
