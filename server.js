@@ -27,10 +27,23 @@ const app = express(); // calling express to use in the future
 
 const port = process.env.PORT;
 
+app.use(express.json());
+
 let fruitData = ['apple', 'pear', 'mango', 'golden kiwi'];
 
 app.get("/", (req, res) => {
-    res.send("Hello Express!");
+    res.send(fruitData);
+})
+
+app.post("/", (req, res) => {
+    let data = req.body.fruit;
+    fruitData.push(data);
+    res.json(fruitData);
+})
+
+app.put("/:id", (req, res) => {
+    let data = fruitData[req.params.id]
+    res.json(data);
 })
 
 app.listen(port, () => {
